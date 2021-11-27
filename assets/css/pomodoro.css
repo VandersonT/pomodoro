@@ -1,0 +1,351 @@
+html{
+    height: 100vh;
+    max-height: 100%;
+    background-color: #333853;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------------------------------boxOption------------------------------------------------*/
+.title{
+    color: #9ea0ad;
+    margin-bottom: 60px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.mainBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boxConfig{
+    display: flex;
+}
+
+.boxConfig__single{
+    width: max-content;
+    margin: 15px;
+}
+
+.boxConfig__single--box{
+    display: flex;
+}
+
+.boxConfig__single--controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+}
+
+.boxConfig__single--controls i{
+    font-size: 24px;
+    color: #656b8a;
+    cursor: pointer;
+}
+
+.boxConfig__single--controls i:active{
+    color: #5f6581;
+}
+
+.boxConfig__single--controls i:nth-of-type(1){
+    margin-bottom: 7px;
+}
+
+.boxConfig__single--screen{
+    background-color: #3c4262;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-box-shadow: 0px 0px 5px 0px #000000; 
+    box-shadow: 0px 0px 5px 0px #000000;
+}
+
+.boxConfig__single p{
+    color: #9ea0ad;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: lighter;
+    width: 120px;
+    font-size: 12px;
+}
+
+.startButton{
+    border: 0;
+    outline: 0;
+    background-color: #3c4262;
+    padding: 10px 40px;
+    border-radius: 4px;
+    color: rgb(202, 202, 202);
+    font-size: 20px;
+    -webkit-box-shadow: 0px -1px 7px -3px #000000; 
+    box-shadow: 0px -1px 7px -3px #000000;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.startButton:active{
+    background-color: #383d5c;
+    color: rgb(189, 189, 189);
+}
+/*-------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------pomodoroWorking---------------------------------------------*/
+.pomodoroWorking{
+    display: none;
+}
+.menu{
+    width: 600px;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.title2{
+    color: #9ea0ad;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+.returnToHome{
+    height: max-content;
+    padding: 10px 30px;
+    border: 0;
+    outline: 0;
+    background-color: #3c4262;
+    border-radius: 4px;
+    color: rgb(202, 202, 202);
+    font-size: 16px;
+    -webkit-box-shadow: 0px -1px 7px -3px #000000; 
+    box-shadow: 0px -1px 7px -3px #000000;
+    cursor: pointer;
+}
+
+.returnToHome:active{
+    background-color: #383d5c;
+    color: rgb(189, 189, 189);
+}
+
+.boxPomodoroTimer{
+    display: flex;
+}
+
+.boxShowTime{
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background-color: #3c4262;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showTime{
+    border: 3px solid #209352;
+    width: 85%;
+    height: 85%;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showTime h2{
+    font-size: 40px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.boxInfoAndControl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.boxInfoAndControl h2{
+    color: #1f9552;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.boxControlsPomodoro{
+    display: flex;
+}
+
+.controlTimer{
+    width: 50px;
+    height: 50px;
+    background-color: #3c4262;
+    color: #a2a5b4;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px -1px 7px -3px #000000; 
+    box-shadow: 0px -1px 7px -3px #000000;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.controlSound{
+    width: 50px;
+    height: 50px;
+    background-color: #3c4262;
+    color: #a2a5b4;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px -1px 7px -3px #000000; 
+    box-shadow: 0px -1px 7px -3px #000000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.controlSound,
+.controlTimer i{
+    line-height: 50px;
+    font-size: 20px;
+}
+/*-------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------Responsive-------------------------------------------------*/
+@media screen and (max-width: 800px){
+    .boxConfig__single--screen{
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+    .boxConfig__single--controls i{
+        font-size: 17px;
+    }
+    .startButton{
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .menu{
+        width: 500px;
+    }
+    .boxShowTime{
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+    }
+    .showTime h2{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .menu{
+        width: 90vw;
+    }
+    .boxShowTime{
+        width: 120px;
+        height: 120px;
+        border-radius: 120px;
+    }
+    .showTime h2{
+        font-size: 20px;
+    }
+    .title2{
+        font-size: 25px;
+    }
+    .boxInfoAndControl h2{
+        font-size: 25px;
+    }
+    .controlTimer,
+    .controlSound{
+        width: 40px;
+        height: 40px;
+    }
+    .controlSound,
+    .controlTimer i{
+        line-height: 40px;
+        font-size: 17px;
+    }
+    .returnToHome{
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    .boxPomodoroTimer{
+        justify-content: center;
+    }
+    .menu{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .title{
+        margin: 0;
+    }
+    .boxOption{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .boxConfig{
+        flex-direction: column;
+    }
+    .boxConfig__single{
+        margin: 5;
+    }
+    .boxConfig__single--screen{
+        font-size: 20px;
+    }
+    .mainBox{
+        padding-bottom: 20px;
+    }
+    .title2,
+    .boxInfoAndControl h2{
+        font-size: 20px;
+    }
+    .boxShowTime{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+    }
+    .showTime h2{
+        font-size: 15px;
+    }
+    .returnToHome{
+        padding: 7px 15px;
+        font-size: 13px;
+    }
+    .controlSound{
+        width: auto;
+        height: max-content;
+        padding: 10px;
+    }
+    .controlSound{
+        line-height: 0;
+        font-size: 17px;
+    }
+    .controlTimer{
+        width: 37px;
+        height: 37px;
+    }
+    .controlTimer i{
+        line-height: 37px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-height: 430px){
+    .title{
+        margin-top: 100px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------*/

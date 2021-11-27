@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pomodoro</title>
+    
+    <!--MetaTag-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,height=device-height" />
+    <meta name="description" content="Temporizador online da técnica pomodoro, muito facil de usar. Ele usa um cronômetro para separar o trabalho em intervalos, tradicionalmente de 25 minutos de duração, separados por pequenos intervalos de 5 minutos geralmente." />
+    <meta name="keyword" content="pomodoro,pomodoro timer,pomodoro tecnica,pomodoro timer online,a pomodoro meaning,pomodoro technique,pomodoro method" />
+    <meta name="author" content="Vanderson Tiago"/>
+
+    <!--css's-->
+    <link rel="shortcut icon" type="image-x/png" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/pomodoro.css" />
+
+    <script src="https://kit.fontawesome.com/90bf9437da.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <section class="boxOption">
+        <h1 class="title"><i class="far fa-clock"></i> Pomodoro</h1>
+        
+        <section class="mainBox">
+            <article class="boxConfig">
+                <div class="boxConfig__single">
+                    <div class="boxConfig__single--box">
+                        <div class="boxConfig__single--controls">
+                            <i class="fas fa-arrow-alt-circle-up btnIncreaseWorkTime"></i>
+                            <i class="fas fa-arrow-alt-circle-down btnReduceWorkTime"></i>
+                        </div>
+                        <div class="boxConfig__single--screen workTime">
+                            25
+                        </div>
+                    </div>
+                    <p>Minutos de trabalho</p>
+                </div>
+                <div class="boxConfig__single">
+                    <div class="boxConfig__single--box">
+                        <div class="boxConfig__single--controls">
+                            <i class="fas fa-arrow-alt-circle-up btnIncreasePause"></i>
+                            <i class="fas fa-arrow-alt-circle-down btnReducePause"></i>
+                        </div>
+                        <div class="boxConfig__single--screen pauseTime">
+                            5
+                        </div>
+                    </div>
+                    <p>Minutos de descanso</p>
+                </div>
+                <div class="boxConfig__single">
+                    <div class="boxConfig__single--box">
+                        <div class="boxConfig__single--controls">
+                            <i class="fas fa-arrow-alt-circle-up btnIncreaseSession"></i>
+                            <i class="fas fa-arrow-alt-circle-down btnReduceSession"></i>
+                        </div>
+                        <div class="boxConfig__single--screen sessionTime">
+                            3
+                        </div>
+                    </div>
+                    <p>Quantas Sessões</p>
+                </div>
+            </article>
+            <button class="startButton">Começar</button>
+        </section>
+
+    </section>
+
+    <section class="pomodoroWorking">
+        
+        <article class="menu">
+            <h1 class="title2">Pomodoro</h1>
+            <button class="returnToHome">Inicio</button>
+        </article>
+
+        <article class="boxPomodoroTimer">
+            <div class="boxShowTime">
+                <div class="showTime">
+                    <h2>00:00</h2>
+                </div>
+            </div>
+            <div class="boxInfoAndControl">
+                <h2>Trabalho</h2>
+                <div class="boxControlsPomodoro">
+                    <div class="controlTimer">
+                        <i class="fas fa-pause"></i>
+                    </div>
+                    <div class="controlSound">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/pomodoroWorking.js"></script>
+</body>
+</html>
