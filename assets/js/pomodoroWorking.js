@@ -4,8 +4,11 @@ function startPomodoro(){
     let currentStatus = 'working';
     let minutes = workTime-1;
     let secounds = 60;
+    let isMute = false;
+    document.querySelector('.controlSound').innerHTML = '<i class="fas fa-volume-up"></i>';
+    let finished = false;
+
     let timer = setInterval(working, 1000);
-    let isMute = false; 
 
     function working(){  
         if(minutes == 0 && secounds == 0){
@@ -24,7 +27,7 @@ function startPomodoro(){
                     document.querySelector('.boxInfoAndControl h2').style.color = '#691010';
                     document.querySelector('.boxInfoAndControl h2').innerText = 'Finalizado'; 
                     clearInterval(timer);
-
+                    finished = true;
                     return false;
                 }
                 /***/
@@ -64,14 +67,17 @@ function startPomodoro(){
     /*------------------------------------------Pause-----------------------------------------------------*/
     let controlTimer = document.querySelector('.controlTimer');
     controlTimer.addEventListener('click', function(){
-        if(isPaused){
-            timer = setInterval(working, 1000);
-            document.querySelector('.controlTimer').innerHTML = '<i class="fas fa-pause"></i>';
-        }else{
-            clearInterval(timer);
-            document.querySelector('.controlTimer').innerHTML = '<i class="fas fa-play"></i>';
+        
+        if(!finished){
+            if(isPaused){
+                timer = setInterval(working, 1000);
+                document.querySelector('.controlTimer').innerHTML = '<i class="fas fa-pause"></i>';
+            }else{
+                clearInterval(timer);
+                document.querySelector('.controlTimer').innerHTML = '<i class="fas fa-play"></i>';
+            }
+            isPaused = !isPaused;
         }
-        isPaused = !isPaused;
     });
     /*-----------------------------------------------------------------------------------------------------*/
 
@@ -107,6 +113,8 @@ function startPomodoro(){
         document.querySelector('.showTime h2').innerHTML = '00:00';
         document.querySelector('.boxOption').style.display = 'flex';
         document.querySelector('.pomodoroWorking').style.display = 'none';
+        currentStatus = 'working';
+        changeToWorkingTheme();
     });
 
 }
